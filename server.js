@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -24,3 +25,8 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+=======
+const dashboardRoutes = require("./routes/dashboardRoutes");
+
+app.use("/api/v1/dashboard", dashboardRoutes);
+>>>>>>> b5265a7cafc245c699ffea77eddb87adda630818

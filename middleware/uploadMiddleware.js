@@ -1,6 +1,9 @@
 const multer = require('multer');
 
+<<<<<<< HEAD
 // Configure storage
+=======
+>>>>>>> b5265a7cafc245c699ffea77eddb87adda630818
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
@@ -10,7 +13,10 @@ const storage = multer.diskStorage({
     },
 });
 
+<<<<<<< HEAD
 // File filter
+=======
+>>>>>>> b5265a7cafc245c699ffea77eddb87adda630818
 const fileFilter = (req, file, cb) => {
     const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
     if (allowedTypes.includes(file.mimetype)) {
