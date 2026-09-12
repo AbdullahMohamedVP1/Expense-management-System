@@ -24,6 +24,7 @@ app.use(express.json());
 connectDB();
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/expense", expenseRoutes);
+app.use("/api/v1/dashboard", dashboardRoutes);
 
 // Serve uploads folder
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
@@ -32,5 +33,4 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 =======
 const dashboardRoutes = require("./routes/dashboardRoutes");
 
-app.use("/api/v1/dashboard", dashboardRoutes);
 >>>>>>> b5265a7cafc245c699ffea77eddb87adda630818
