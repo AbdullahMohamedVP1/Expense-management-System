@@ -22,7 +22,7 @@ The application is designed for anyone who wants to manage their budget and keep
 ### Frontend
 
 * React
-* Tailwind CSS
+* Bootstrap
 
 ### Backend
 
@@ -172,7 +172,8 @@ Base URL:
 > **Note:** Protected endpoints require a valid JWT authentication token.
 
 ## UI/UX Design
-
+### Member 1 : Ahmed Saeed
+### Member 2 : Belal Omar
 Figma Design:
 https://www.figma.com/design/rIPsg7fCX9WSUyfkF6LXWD/Untitled
 
