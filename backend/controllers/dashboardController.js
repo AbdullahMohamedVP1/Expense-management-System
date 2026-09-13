@@ -1,5 +1,5 @@
-const Income = require("../models/Income");
-const Expense = require("../models/Expense");
+const Income = require("../models/income");
+const Expense = require("../models/expense");
 const { isValidObjectId, Types } = require("mongoose");
 
 exports.getDashboardData = async (req, res) => {
