@@ -5,6 +5,15 @@ function IncomeCard({
   amount,
   onDelete,
 }) {
+
+  const formattedDate = date
+    ? new Date(date).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      })
+    : "";
+
   return (
     <div className="income-card">
 
@@ -25,7 +34,7 @@ function IncomeCard({
         <h5>{title}</h5>
 
         <p className="income-date">
-          {date}
+          {formattedDate}
         </p>
 
         <span className="income-category">
