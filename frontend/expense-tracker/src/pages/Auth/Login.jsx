@@ -10,22 +10,22 @@ const Login = () => {
   const [error, setError] = useState('');
 
   const navigate = useNavigate();
-
+  // Handle form submission and authentication
  const handleLogin = async (e) => {
     e.preventDefault();
-
+  // Validate email address format
     if (!validateEmail(email)) {
       setError('Please enter a valid email address.');
       return;
     }
-
+    // Check if password is provided
     if (!password) {
       setError('Please enter the password.');
       return;
     }
 
     setError('');
-
+   // Send login request to backend API
     try {
       const response = await fetch('http://localhost:5000/api/auth/login', {
         method: 'POST',
