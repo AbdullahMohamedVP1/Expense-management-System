@@ -60,9 +60,9 @@ function Income() {
       income.title.toLowerCase().includes(search) ||
       income.category.toLowerCase().includes(search);
 
-    const matchesDate =
-      selectedDate === "" ||
-      income.date === selectedDate;
+     const matchesDate =
+  selectedDate === "" ||
+  String(income.date || "").slice(0, 10) === selectedDate;
 
     return matchesSearch && matchesDate;
   });
