@@ -15,20 +15,20 @@ const SignUp = () => {
   const [error, setError] = useState('');
 
   const navigate = useNavigate();
-
+  // Handle registration form submission
   const handleSignUp = async (e) => {
     e.preventDefault();
-
+  // Validate full name entry
     if (!fullName) {
       setError('Please enter your full name.');
       return;
     }
-
+    // Validate email format
     if (!validateEmail(email)) {
       setError('Please enter a valid email address.');
       return;
     }
-
+    // Validate password input
     if (!password) {
       setError('Please enter the password.');
       return;
