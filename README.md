@@ -45,8 +45,8 @@ The application is designed for anyone who wants to manage their budget and keep
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/AbdullahMohamedVP1/Expense-System.git
-cd Expense-System
+git clone https://github.com/AbdullahMohamedVP1/Expense-management-System.git
+cd Expense-management-System
 ```
 
 ### 2. Backend Setup
@@ -54,7 +54,7 @@ cd Expense-System
 Navigate to the backend folder:
 
 ```bash
-cd Backend
+cd backend
 ```
 
 Install the required dependencies:
