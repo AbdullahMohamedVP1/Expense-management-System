@@ -1,5 +1,5 @@
 const xlsx = require("xlsx");
-const Expense = require("../models/Expense");
+const Expense = require("../models/expense");
 
 // Add Expense Source
 exports.addExpense = async (req, res) => {
@@ -42,8 +42,13 @@ exports.getAllExpense = async (req, res) => {
 
 // Delete Expense Source
 exports.deleteExpense = async (req, res) => {
+  const userId = req.user.id;
+
   try {
-    await Expense.findByIdAndDelete(req.params.id);
+    const expense = await Expense.findOneAndDelete({ _id: req.params.id, userId });
+    if (!expense) {
+      return res.status(404).json({ message: "Expense not found" });
+    }
     res.json({ message: "Expense deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: "Server Error" });
